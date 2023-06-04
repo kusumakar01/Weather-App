@@ -34,7 +34,7 @@ function OutputArea(props) {
       </div>
       <div className="right-col col-12 col-sm-4 p-0 vh-center">
         <div
-          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 ${
+          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 section-3-data ${
             props.theme ? "night-ulined" : "ulined"
           }`}
         >
@@ -42,7 +42,7 @@ function OutputArea(props) {
           <div className="col-4 p-0">{props.weather.main.temp_min} &deg;C</div>
         </div>
         <div
-          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 ${
+          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 section-3-data ${
             props.theme ? "night-ulined" : "ulined"
           }`}
         >
@@ -50,7 +50,7 @@ function OutputArea(props) {
           <div className="col-4 p-0">{props.weather.main.temp_max} &deg;C</div>
         </div>
         <div
-          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 ${
+          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 section-3-data ${
             props.theme ? "night-ulined" : "ulined"
           }`}
         >
@@ -60,7 +60,7 @@ function OutputArea(props) {
           </div>
         </div>
         <div
-          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 ${
+          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 section-3-data ${
             props.theme ? "night-ulined" : "ulined"
           }`}
         >
@@ -68,7 +68,7 @@ function OutputArea(props) {
           <div className="col-4 p-0">{props.weather.main.pressure} hPa</div>
         </div>
         <div
-          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 ${
+          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 section-3-data ${
             props.theme ? "night-ulined" : "ulined"
           }`}
         >
@@ -76,7 +76,7 @@ function OutputArea(props) {
           <div className="col-4 p-0">{props.weather.visibility} m</div>
         </div>
         <div
-          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 ${
+          className={`row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 section-3-data ${
             props.theme ? "night-ulined" : "ulined"
           }`}
         >
@@ -89,7 +89,7 @@ function OutputArea(props) {
             props.weather.sys.sunrise * 1000
           ).getSeconds()}`}</div>
         </div>
-        <div className="row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2">
+        <div className="row w-100 vh-center flex-row justify-content-around p-0 my-1 pb-2 section-3-data">
           <div className="col-8 p-0">Sunset:</div>
           <div className="col-4 p-0">{`${new Date(
             props.weather.sys.sunset * 1000

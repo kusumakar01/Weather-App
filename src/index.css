@@ -299,3 +299,11 @@ input:checked + .slider::before {
     font-size: 0.7rem;
   }
 }
+
+@media (max-height: 650px) {
+  .section-3-data{
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.1rem !important;
+    padding-bottom: 0.2rem !important;
+  }
+}
