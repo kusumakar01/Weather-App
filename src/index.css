@@ -288,3 +288,14 @@ input:checked + .slider::before {
     font-size: 1.2rem;
   }
 }
+
+@media (max-width: 350px) {
+
+  .section-1-data {
+    font-size: 1.1rem;
+  }
+
+  .section-2-data{
+    font-size: 0.7rem;
+  }
+}
