@@ -4,14 +4,14 @@ import InputArea from "./InputArea";
 import OutputArea from "./OutputArea";
 
 function Content(props) {
-  const [city, setCity] = useState("delhi");
+  const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
   const [airPollution, setAirPollution] = useState(null);
   const API_key = "e6003447206084783ebff25daac8d6ec";
   const url0 = (latitude, longitude) => `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API_key}`;
-  const url1 = `https://api.openweathermap.org/data/2.5/weather?q=${city.trim().toLowerCase()}&units=metric&appid=${API_key}`;
+  const url1 = (cityName) => `https://api.openweathermap.org/data/2.5/weather?q=${cityName.trim().toLowerCase()}&units=metric&appid=${API_key}`;
   const url2 = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_key}`;
 
   function getLocationPromise() {
@@ -25,15 +25,15 @@ function Content(props) {
       .then((position) => {
         getWeather(url0(position.coords.latitude, position.coords.longitude));
         getAirPollution();
-        setCity("");
       })
       .catch((error) => {
         console.error(error);
-        getUpdate();
+        getWeather(url1("Delhi"));
+        getAirPollution();
       });
   }
 
-  function getWeather(url = url1) {
+  function getWeather(url = url1(city)) {
     axios
       .get(url)
       .then((res) => {
